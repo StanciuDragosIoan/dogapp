@@ -1,0 +1,22 @@
+<div class="card card-body mb-5">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <input
+        type="text"
+        name="text"
+        [(ngModel)]="text"
+        class="form-control"
+        placeholder="Type his name and generate a doggy!"
+      />
+    </div>
+    <input
+      type="submit"
+      value="Generate a dogy!"
+      class="btn btn-danger"
+      [disabled]="!this.text"
+    />
+    <button type="button" class="btn btn-warning ml-2" [hidden]="!this.text">
+      Clear
+    </button>
+  </form>
+</div>
